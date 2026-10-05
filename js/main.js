@@ -157,7 +157,7 @@
         const alpha = p.a * (.55 + .45 * Math.sin(p.tw));
         const x = p.x + p.ox, y = p.y + p.oy;
         const g = ctx.createRadialGradient(x, y, 0, x, y, p.r * 4);
-        g.addColorStop(0, `rgba(255,224,160,${alpha})`); g.addColorStop(1, 'rgba(212,168,87,0)');
+        g.addColorStop(0, `rgba(255,255,255,${alpha})`); g.addColorStop(1, 'rgba(200,204,212,0)');
         ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, p.r * 4, 0, Math.PI * 2); ctx.fill();
       }
       requestAnimationFrame(draw);
@@ -336,7 +336,7 @@
     gsap.from(['.cta .kicker', '.cta__sub', '.cta__btn'], { opacity: 0, y: 30, duration: 1, ease: 'expo.out', stagger: .12, delay: .3, scrollTrigger: { trigger: '.cta', start: 'top 70%' } });
 
     const canvas = $('.cta__confetti'); const ctx = canvas.getContext('2d');
-    const colors = ['#d4a857', '#f1d08a', '#e8b4a6', '#f6f0e6', '#a8803a', '#9ec9e6', '#f4a6c1'];
+    const colors = ['#ffffff', '#f4f4f5', '#e4e4e7', '#c9ccd2', '#a1a1aa', '#71717a', '#3f3f46'];
     let pieces = [], animating = false, w, h;
     const resize = () => { const dpr = Math.min(devicePixelRatio || 1, 2); w = canvas.clientWidth; h = canvas.clientHeight; canvas.width = w * dpr; canvas.height = h * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); };
     resize(); window.addEventListener('resize', resize);
@@ -375,7 +375,7 @@
 
   /* ---------- Localização e footer ---------- */
   function initLocation() {
-    gsap.from('.footer__big', { yPercent: 60, opacity: 0, duration: 1.6, ease: 'expo.out', scrollTrigger: { trigger: '.footer', start: 'top 90%' } });
+    gsap.from('.footer__top > *', { y: 40, opacity: 0, duration: 1.4, ease: 'expo.out', stagger: .12, scrollTrigger: { trigger: '.footer', start: 'top 90%' } });
   }
 
   /* ---------- Nav: esconde/mostra + link ativo + progresso ---------- */
@@ -469,6 +469,14 @@
     });
   }
 
+  /* ---------- Celular: foto ganha cor ao passar pelo centro da tela ---------- */
+  function initFocusColor() {
+    if (finePointer) return;
+    $$('.about__img, .ecard, .g').forEach(el => {
+      ScrollTrigger.create({ trigger: el, start: 'top 65%', end: 'bottom 35%', toggleClass: 'in-focus' });
+    });
+  }
+
   /* ---------- Boot ---------- */
   initMenu();
   initLightbox();
@@ -486,6 +494,7 @@
   initCTA();
   initLocation();
   initNav();
+  initFocusColor();
 
   // Começa quando a foto principal carregar (ou após 3,5s, para não prender o usuário)
   const start = () => { intro(); ScrollTrigger.refresh(); };
