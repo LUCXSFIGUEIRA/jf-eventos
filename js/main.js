@@ -100,7 +100,7 @@
     const tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
     const counter = { v: 0 };
 
-    tl.to('.preloader__logo span', { y: 0, duration: 1.1, stagger: .12 })
+    tl.to('.preloader__logo img', { y: 0, duration: 1.1 })
       .to('.preloader__bar i', { scaleX: 1, duration: 1.6, ease: 'power2.inOut' }, '<.1')
       .to(counter, { v: 100, duration: 1.6, ease: 'power2.inOut', onUpdate: () => { $('.preloader__count').textContent = Math.round(counter.v); } }, '<')
       .to('.preloader__inner', { yPercent: -40, opacity: 0, duration: .8, ease: 'power3.in' }, '+=.15')

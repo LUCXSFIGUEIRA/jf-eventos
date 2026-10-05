@@ -32,6 +32,10 @@ galeria-6.jpg                   Galeria                              qualquer
 galeria-7.jpg                   Galeria                              qualquer
 galeria-8.jpg                   Galeria - foto larga                 horizontal
 
+LOGO
+- logo.png, favicon.png e apple-touch-icon.png foram gerados a partir de
+  "LOGO JF.png" (fundo transparente). Não apague esses arquivos.
+
 DICAS
 - Se a foto estiver em .png, .jpeg ou .webp, salve/converta para .jpg
   (ou renomeie: "foto.jpeg" -> "foto.jpg" funciona).
