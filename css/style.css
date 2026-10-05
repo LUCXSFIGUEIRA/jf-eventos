@@ -18,6 +18,9 @@
   --gray-2: #a1a1aa;
   --gray-3: #71717a;
   --silver: #c9ccd2;
+  --wa: #25d366;
+  --wa-dark: #128c4a;
+  --ig: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
   --metal: linear-gradient(115deg, #7c8089 0%, #eceef2 20%, #a7abb3 38%, #fbfbfc 55%, #8d9199 74%, #dfe1e5 100%);
   --line: rgba(247, 247, 248, .09);
   --line-strong: rgba(247, 247, 248, .18);
@@ -363,9 +366,18 @@ body::after {
 /* ========== WhatsApp flutuante ========== */
 .wa-float { position: fixed; right: 22px; bottom: 22px; z-index: var(--z-float); width: 58px; height: 58px; border-radius: 50%; background: rgba(17, 17, 19, .82); backdrop-filter: blur(10px); border: 1px solid rgba(201, 204, 210, .4); display: grid; place-items: center; font-size: 1.7rem; color: var(--white); box-shadow: 0 14px 34px -10px rgba(0, 0, 0, .7); transform: scale(0); transition: transform .5s var(--ease), background .4s, color .4s; }
 .wa-float.is-visible { transform: scale(1); }
-.wa-float:hover { transform: scale(1.08) rotate(-8deg); background: var(--white); color: var(--black); }
-.wa-float::before { content: ""; position: absolute; inset: -1px; border-radius: 50%; border: 1px solid var(--silver); animation: pulse 2.8s ease-out infinite; }
+.wa-float:hover { transform: scale(1.08) rotate(-8deg); background: var(--wa); border-color: var(--wa); }
+.wa-float:hover .ph-whatsapp-logo { color: var(--white); }
+.wa-float::before { content: ""; position: absolute; inset: -1px; border-radius: 50%; border: 1px solid var(--wa); animation: pulse 2.8s ease-out infinite; }
 @keyframes pulse { from { transform: scale(1); opacity: .6; } to { transform: scale(1.7); opacity: 0; } }
+
+/* ========== Cores das marcas (WhatsApp e Instagram) ========== */
+.ph-whatsapp-logo { color: var(--wa); transition: color .4s; }
+.btn--primary .ph-whatsapp-logo { color: var(--wa-dark); }
+.ph-instagram-logo { background: var(--ig); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+.wa-float { border-color: rgba(37, 211, 102, .5); }
+/* no ícone redondo do endereço, o degradê cobre só o desenho do logo */
+.info__ic.ph-instagram-logo { background-size: 1.2rem 1.2rem; background-position: center; background-repeat: no-repeat; }
 
 /* ========== Lightbox ========== */
 .lightbox { position: fixed; inset: 0; z-index: var(--z-lightbox); background: rgba(8, 8, 9, .95); backdrop-filter: blur(10px); display: grid; place-items: center; opacity: 0; visibility: hidden; transition: opacity .5s var(--ease), visibility .5s; }
