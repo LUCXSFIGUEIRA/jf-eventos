@@ -1,5 +1,5 @@
 /* =========================================================
-   JF EVENTOS — interações e animações
+   JF EVENTOS - interações e animações
    GSAP + ScrollTrigger + Lenis
    ========================================================= */
 (() => {
@@ -97,15 +97,14 @@
       lenis?.start();
     };
     if (reduceMotion) { reveal(); return; }
+    // abertura curta: a marca aparece e a cortina sobe sem segurar o conteúdo
     const tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
-    const counter = { v: 0 };
 
-    tl.to('.preloader__logo img', { y: 0, duration: 1.1 })
-      .to('.preloader__bar i', { scaleX: 1, duration: 1.6, ease: 'power2.inOut' }, '<.1')
-      .to(counter, { v: 100, duration: 1.6, ease: 'power2.inOut', onUpdate: () => { $('.preloader__count').textContent = Math.round(counter.v); } }, '<')
-      .to('.preloader__inner', { yPercent: -40, opacity: 0, duration: .8, ease: 'power3.in' }, '+=.15')
-      .to('.preloader__curtain--1', { yPercent: -100, duration: 1.1, ease: 'expo.inOut' }, '-=.25')
-      .to('.preloader__curtain--2', { yPercent: -100, duration: 1.1, ease: 'expo.inOut' }, '-=.95')
+    tl.to('.preloader__logo img', { y: 0, duration: .8 })
+      .to('.preloader__bar i', { scaleX: 1, duration: .8, ease: 'power2.inOut' }, '<.05')
+      .to('.preloader__inner', { yPercent: -40, opacity: 0, duration: .5, ease: 'power3.in' }, '+=.05')
+      .to('.preloader__curtain--1', { yPercent: -100, duration: .9, ease: 'expo.inOut' }, '-=.2')
+      .to('.preloader__curtain--2', { yPercent: -100, duration: .9, ease: 'expo.inOut' }, '-=.78')
       .add(reveal)
       .from('.hero__media img', { scale: 1.35, duration: 2.4, ease: 'expo.out' }, '-=1.2')
       .from('.hero__title .word', { yPercent: 115, rotate: 4, duration: 1.4, stagger: .08 }, '-=2')
@@ -113,8 +112,7 @@
       .from('.hero__eyebrow .line', { scaleX: 0, duration: 1.2 }, '<')
       .from('.hero__sub', { opacity: 0, y: 30, duration: 1 }, '-=1')
       .from('.hero__ctas > *', { opacity: 0, y: 30, duration: 1, stagger: .1 }, '-=.8')
-      .from('.nav', { yPercent: -100, opacity: 0, duration: 1, clearProps: 'transform,opacity' }, '-=1')
-      .from('.hero__scroll', { opacity: 0, duration: 1 }, '-=.6');
+      .from('.nav', { yPercent: -100, opacity: 0, duration: 1, clearProps: 'transform,opacity' }, '-=1');
 
   }
 
@@ -209,7 +207,6 @@
       });
     });
 
-    $$('.kicker').forEach(k => gsap.from(k, { opacity: 0, x: -30, duration: 1, ease: 'expo.out', scrollTrigger: { trigger: k, start: 'top 90%' } }));
 
     $$('.fade-up').forEach(el => gsap.from(el, { opacity: 0, y: 50, duration: 1.2, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 90%' } }));
 
@@ -234,18 +231,6 @@
 
     gsap.from('.about__badge', { scale: 0, rotate: -180, duration: 1.6, ease: 'back.out(1.6)', scrollTrigger: { trigger: '.about__visual', start: 'top 60%' } });
     gsap.to('.about__img--b', { y: -60, ease: 'none', scrollTrigger: { trigger: '.about__visual', start: 'top bottom', end: 'bottom top', scrub: true } });
-  }
-
-  /* ---------- Contadores ---------- */
-  function initCounters() {
-    $$('.count').forEach(el => {
-      const to = +el.dataset.to; const o = { v: 0 };
-      gsap.to(o, {
-        v: to, duration: 2.2, ease: 'power3.out',
-        scrollTrigger: { trigger: el, start: 'top 92%' },
-        onUpdate: () => { el.textContent = Math.round(o.v); }
-      });
-    });
   }
 
   /* ---------- Eventos: scroll horizontal fixado ---------- */
@@ -278,23 +263,22 @@
     });
   }
 
-  /* ---------- Cards de estrutura: entrada + tilt 3D ---------- */
+  /* ---------- Estrutura (bento): entrada em sequência + borda que segue o cursor ---------- */
   function initFeatures() {
-    gsap.from('.fcard', {
-      y: 100, opacity: 0, rotateX: -25, duration: 1.3, ease: 'expo.out', stagger: { each: .1, grid: 'auto', from: 'start' },
-      scrollTrigger: { trigger: '.features__grid', start: 'top 80%' }
+    gsap.from('.bento .cell', {
+      y: 60, opacity: 0, duration: 1.2, ease: 'expo.out', stagger: .08,
+      scrollTrigger: { trigger: '.bento', start: 'top 80%' }
     });
+    $$('.cell--img img').forEach(img => gsap.fromTo(img, { yPercent: -6, scale: 1.12 }, {
+      yPercent: 6, ease: 'none', scrollTrigger: { trigger: img.parentElement, start: 'top bottom', end: 'bottom top', scrub: true }
+    }));
     if (!finePointer) return;
-    $$('.tilt').forEach(card => {
-      const rx = gsap.quickTo(card, 'rotationX', { duration: .6, ease: 'power3' });
-      const ry = gsap.quickTo(card, 'rotationY', { duration: .6, ease: 'power3' });
-      card.addEventListener('pointermove', e => {
-        const r = card.getBoundingClientRect();
-        const px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
-        ry((px - .5) * 14); rx((.5 - py) * 14);
-        card.style.setProperty('--mx', px * 100 + '%'); card.style.setProperty('--my', py * 100 + '%');
+    $$('.cell--plain').forEach(cell => {
+      cell.addEventListener('pointermove', e => {
+        const r = cell.getBoundingClientRect();
+        cell.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        cell.style.setProperty('--my', (e.clientY - r.top) + 'px');
       });
-      card.addEventListener('pointerleave', () => { rx(0); ry(0); });
     });
   }
 
@@ -311,8 +295,8 @@
   /* ---------- Galeria ---------- */
   function initGallery() {
     $$('.g').forEach((g, i) => {
-      gsap.fromTo(g, { clipPath: 'inset(15% 15% 15% 15% round 16px)', opacity: 0 }, {
-        clipPath: 'inset(0% 0% 0% 0% round 16px)', opacity: 1, duration: 1.4, ease: 'expo.out', delay: (i % 4) * .08,
+      gsap.fromTo(g, { clipPath: 'inset(15% 15% 15% 15% round 6px)', opacity: 0 }, {
+        clipPath: 'inset(0% 0% 0% 0% round 6px)', opacity: 1, duration: 1.4, ease: 'expo.out', delay: (i % 4) * .08,
         scrollTrigger: { trigger: g, start: 'top 92%' }
       });
       gsap.fromTo($('img', g), { scale: 1.4 }, { scale: 1, duration: 1.8, ease: 'expo.out', delay: (i % 4) * .08, scrollTrigger: { trigger: g, start: 'top 92%' }, clearProps: 'transform' });
@@ -333,7 +317,7 @@
   /* ---------- CTA + confete ---------- */
   function initCTA() {
     gsap.from('.cta__line > *', { yPercent: 110, duration: 1.4, ease: 'expo.out', stagger: .12, scrollTrigger: { trigger: '.cta', start: 'top 70%' } });
-    gsap.from(['.cta .kicker', '.cta__sub', '.cta__btn'], { opacity: 0, y: 30, duration: 1, ease: 'expo.out', stagger: .12, delay: .3, scrollTrigger: { trigger: '.cta', start: 'top 70%' } });
+    gsap.from(['.cta__sub', '.cta__btn'], { opacity: 0, y: 30, duration: 1, ease: 'expo.out', stagger: .12, delay: .3, scrollTrigger: { trigger: '.cta', start: 'top 70%' } });
 
     const canvas = $('.cta__confetti'); const ctx = canvas.getContext('2d');
     const colors = ['#ffffff', '#f4f4f5', '#e4e4e7', '#c9ccd2', '#a1a1aa', '#71717a', '#3f3f46'];
@@ -408,29 +392,9 @@
     });
   }
 
-  /* ---------- Cursor customizado + botões magnéticos ---------- */
-  function initCursor() {
+  /* ---------- Botões magnéticos (só mouse) ---------- */
+  function initMagnetic() {
     if (!finePointer || reduceMotion) return;
-    document.body.classList.add('has-cursor');
-    const cur = $('.cursor'), dot = $('.cursor__dot'), ring = $('.cursor__ring'), label = $('.cursor__label');
-    gsap.set([dot, ring], { x: -100, y: -100 });
-    const dx = gsap.quickTo(dot, 'x', { duration: .1 }), dy = gsap.quickTo(dot, 'y', { duration: .1 });
-    const rx = gsap.quickTo(ring, 'x', { duration: .5, ease: 'power3' }), ry = gsap.quickTo(ring, 'y', { duration: .5, ease: 'power3' });
-    window.addEventListener('pointermove', e => { dx(e.clientX); dy(e.clientY); rx(e.clientX); ry(e.clientY); });
-
-    document.addEventListener('pointerover', e => {
-      const t = e.target.closest('[data-cursor], a, button, .g');
-      if (!t) return;
-      const txt = t.dataset.cursor || t.closest('[data-cursor]')?.dataset.cursor;
-      if (txt) { label.textContent = txt; cur.classList.add('is-label'); }
-      else cur.classList.add('is-hover');
-    });
-    document.addEventListener('pointerout', e => {
-      const t = e.target.closest('[data-cursor], a, button, .g');
-      if (!t || (e.relatedTarget && t.contains(e.relatedTarget))) return;
-      cur.classList.remove('is-label', 'is-hover');
-    });
-
     $$('.magnetic').forEach(el => {
       const mx = gsap.quickTo(el, 'x', { duration: .6, ease: 'elastic.out(1, .4)' });
       const my = gsap.quickTo(el, 'y', { duration: .6, ease: 'elastic.out(1, .4)' });
@@ -454,9 +418,15 @@
       img.onload = () => { img.style.opacity = 1; };
       img.src = src; img.alt = items[idx].alt;
     };
-    const open = i => { show(i); lb.classList.add('is-open'); lb.setAttribute('aria-hidden', 'false'); lenis?.stop(); };
-    const close = () => { lb.classList.remove('is-open'); lb.setAttribute('aria-hidden', 'true'); lenis?.start(); };
-    items.forEach((it, i) => it.parentElement.addEventListener('click', () => open(i)));
+    let opener = null;
+    const open = i => { opener = document.activeElement; show(i); lb.classList.add('is-open'); lb.setAttribute('aria-hidden', 'false'); lenis?.stop(); $('.lightbox__close').focus(); };
+    const close = () => { lb.classList.remove('is-open'); lb.setAttribute('aria-hidden', 'true'); lenis?.start(); opener?.focus(); };
+    items.forEach((it, i) => {
+      const fig = it.parentElement;
+      fig.tabIndex = 0; fig.setAttribute('role', 'button'); fig.setAttribute('aria-label', 'Ampliar foto: ' + it.alt);
+      fig.addEventListener('click', () => open(i));
+      fig.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i); } });
+    });
     $('.lightbox__close').addEventListener('click', close);
     $('.lightbox__prev').addEventListener('click', e => { e.stopPropagation(); show(idx - 1); });
     $('.lightbox__next').addEventListener('click', e => { e.stopPropagation(); show(idx + 1); });
@@ -472,7 +442,7 @@
   /* ---------- Celular: foto ganha cor ao passar pelo centro da tela ---------- */
   function initFocusColor() {
     if (finePointer) return;
-    $$('.about__img, .ecard, .g').forEach(el => {
+    $$('.about__img, .ecard, .g, .cell--img').forEach(el => {
       ScrollTrigger.create({ trigger: el, start: 'top 65%', end: 'bottom 35%', toggleClass: 'in-focus' });
     });
   }
@@ -480,12 +450,11 @@
   /* ---------- Boot ---------- */
   initMenu();
   initLightbox();
-  initCursor();
+  initMagnetic();
   initHero();
   initRotator();
   initMarquee();
   initReveals();
-  initCounters();
   initEvents();
   initFeatures();
   initQuote();

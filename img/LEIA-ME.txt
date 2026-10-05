@@ -21,6 +21,10 @@ evento-corporativo.jpg          Card "Corporativos"                  vertical
 evento-batizado.jpg             Card "Batizados & Chás"              vertical
 evento-confraternizacao.jpg     Card "Confraternizações"             vertical
 
+estrutura-salao.jpg             "Estrutura" - card grande do salão     horizontal ou quadrada
+estrutura-area-externa.jpg      "Estrutura" - card da área externa     horizontal
+estrutura-churrasco.jpg         "Estrutura" - card da churrasqueira    qualquer
+
 destaque.jpg                    Fundo da frase "Você sonha..."       horizontal
 
 galeria-1.jpg                   Galeria - foto alta                  vertical
