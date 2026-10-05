@@ -442,7 +442,7 @@
   /* ---------- Celular: foto ganha cor ao passar pelo centro da tela ---------- */
   function initFocusColor() {
     if (finePointer) return;
-    $$('.about__img, .ecard, .g, .cell--img').forEach(el => {
+    $$('.about__img, .cell--img').forEach(el => {
       ScrollTrigger.create({ trigger: el, start: 'top 65%', end: 'bottom 35%', toggleClass: 'in-focus' });
     });
   }
