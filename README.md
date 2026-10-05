@@ -15,4 +15,5 @@ Landing page do **JF Eventos**, espaço para casamentos, aniversários, chá de 
 Basta abrir o `index.html` no navegador.
 
 ## Trocar as fotos
-As imagens atuais são do Unsplash, só para ilustrar. Para usar fotos reais do espaço, coloque os arquivos em `img/` e troque os `src` no `index.html`.
+Coloque as fotos reais na pasta [`img/`](img/) com os nomes listados em [`img/LEIA-ME.txt`](img/LEIA-ME.txt) (ex.: `capa.jpg`, `salao-1.jpg`, `galeria-1.jpg`).
+Cada foto com o nome certo substitui automaticamente a imagem ilustrativa; as que faltarem continuam com a foto de exemplo do Unsplash.

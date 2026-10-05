@@ -179,8 +179,8 @@
     setInterval(() => {
       const cur = words[i]; i = (i + 1) % words.length; const next = words[i];
       if (typeof gsap === 'undefined') { cur.classList.remove('is-active'); next.classList.add('is-active'); return; }
-      gsap.to(cur, { yPercent: -70, opacity: 0, duration: .6, ease: 'power3.in', onComplete: () => cur.classList.remove('is-active') });
-      gsap.fromTo(next, { yPercent: 70, opacity: 0 }, { yPercent: 0, opacity: 1, duration: .8, delay: .45, ease: 'expo.out', onStart: () => next.classList.add('is-active') });
+      gsap.to(cur, { y: 0, yPercent: -100, opacity: 0, duration: .6, ease: 'power3.in', onComplete: () => cur.classList.remove('is-active') });
+      gsap.fromTo(next, { y: 0, yPercent: 100, opacity: 0 }, { y: 0, yPercent: 0, opacity: 1, duration: .8, delay: .3, ease: 'expo.out', onStart: () => next.classList.add('is-active') });
     }, 2600);
   }
 

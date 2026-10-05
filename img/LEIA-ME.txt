@@ -1,0 +1,44 @@
+PASTA DE FOTOS DO SITE — JF EVENTOS
+====================================
+
+Coloque aqui as fotos reais do espaço usando EXATAMENTE os nomes abaixo
+(tudo minúsculo, sem acento, extensão .jpg).
+
+Assim que uma foto com o nome certo estiver nesta pasta, ela aparece no site
+automaticamente. Se a foto não existir, o site continua mostrando a imagem
+ilustrativa de exemplo — então você pode trocar aos poucos.
+
+NOME DO ARQUIVO                 ONDE APARECE                         FORMATO SUGERIDO
+-------------------------------------------------------------------------------------
+capa.jpg                        Foto grande do topo da página        horizontal (deitada)
+salao-1.jpg                     "Sobre nós" - foto grande            horizontal
+area-externa-1.jpg              "Sobre nós" - foto menor             horizontal
+
+evento-casamento.jpg            Card "Casamentos"                    vertical (em pé)
+evento-aniversario.jpg          Card "Aniversários"                  vertical
+evento-cha-revelacao.jpg        Card "Chá de Revelação"              vertical
+evento-corporativo.jpg          Card "Corporativos"                  vertical
+evento-batizado.jpg             Card "Batizados & Chás"              vertical
+evento-confraternizacao.jpg     Card "Confraternizações"             vertical
+
+destaque.jpg                    Fundo da frase "Você sonha..."       horizontal
+
+galeria-1.jpg                   Galeria - foto alta                  vertical
+galeria-2.jpg                   Galeria                              qualquer
+galeria-3.jpg                   Galeria                              qualquer
+galeria-4.jpg                   Galeria - foto larga                 horizontal
+galeria-5.jpg                   Galeria - foto alta                  vertical
+galeria-6.jpg                   Galeria                              qualquer
+galeria-7.jpg                   Galeria                              qualquer
+galeria-8.jpg                   Galeria - foto larga                 horizontal
+
+DICAS
+- Se a foto estiver em .png, .jpeg ou .webp, salve/converta para .jpg
+  (ou renomeie: "foto.jpeg" -> "foto.jpg" funciona).
+- Tamanho ideal: até ~1 MB por foto (capa e destaque: ~2000 px de largura;
+  as demais: ~1200 px). Fotos muito pesadas deixam o site lento.
+  Para reduzir: https://squoosh.app (grátis).
+- As fotos são cortadas automaticamente para encaixar, então deixe o
+  assunto principal mais ao centro da imagem.
+- Depois de colocar as fotos, envie para o GitHub (git add, commit, push)
+  para elas aparecerem no site publicado.
