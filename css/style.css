@@ -225,7 +225,7 @@ body::after {
 .about__lead .w { display: inline-block; opacity: .14; transition: none; }
 .about__body { margin-top: 2rem; color: var(--muted); max-width: 54ch; font-size: 1.05rem; }
 .about__body strong { color: var(--cream); }
-.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; padding-top: 2.4rem; border-top: 1px solid rgba(246, 240, 230, .1); }
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 220px)); gap: 1.5rem; margin-top: 3rem; padding-top: 2.4rem; border-top: 1px solid rgba(246, 240, 230, .1); }
 .stat strong { display: block; font-family: var(--serif); font-size: clamp(2.4rem, 4.4vw, 3.6rem); font-weight: 500; line-height: 1; color: var(--gold); font-variant-numeric: tabular-nums; }
 .stat small { display: block; margin-top: .5rem; font-size: .82rem; color: var(--muted); }
 .about__visual { position: relative; height: clamp(480px, 60vw, 720px); }
