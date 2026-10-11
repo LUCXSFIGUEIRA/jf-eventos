@@ -1,1 +1,5 @@
 .claude/
+
+# Fotos originais (pesadas). O site usa só as versões otimizadas em img/site/
+img/Casamento Lucas e Cássia/
+img/*.jpg
