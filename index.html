@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JF Eventos | Espaço para eventos em Guareí-SP</title>
   <meta name="description" content="JF Eventos: espaço para casamentos, aniversários, chá de revelação e eventos corporativos em Guareí-SP. Gramado, deck com vista, salão, churrasqueira, freezers, mesas e cadeiras." />
-  <meta name="theme-color" content="#f3f4ee" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#111813" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f4f2ee" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#121a26" media="(prefers-color-scheme: dark)" />
   <meta name="color-scheme" content="light dark" />
   <meta property="og:title" content="JF Eventos | A festa inteira num lugar só" />
   <meta property="og:description" content="Gramado, deck com vista para o campo e salão completo no centro de Guareí-SP." />
@@ -15,21 +15,14 @@
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
 
   <link rel="preload" href="fonts/satoshi-500-normal.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="fonts/satoshi-500-italic.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="img/site/lc-casal-ceu.webp" as="image" type="image/webp" />
+  <link rel="preload" href="fonts/satoshi-400-italic.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="img/site/lc-deck.webp" as="image" type="image/webp" />
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/light/style.css" />
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
-  <link rel="stylesheet" href="css/style.css?v=20" />
+  <link rel="stylesheet" href="css/style.css?v=21" />
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-
-  <!-- ===== ABERTURA ===== -->
-  <div class="preloader" aria-hidden="true">
-    <div class="preloader__logo"><img src="img/logo-dark.png" alt="" /></div>
-    <div class="preloader__curtain preloader__curtain--1"></div>
-    <div class="preloader__curtain preloader__curtain--2"></div>
-  </div>
 
   <!-- ===== NAV ===== -->
   <header class="nav">
@@ -42,6 +35,7 @@
     </a>
     <nav class="nav__links" aria-label="Principal">
       <a href="#sobre">Sobre</a>
+      <a href="#historia">Um dia no JF</a>
       <a href="#eventos">Eventos</a>
       <a href="#estrutura">Estrutura</a>
       <a href="#galeria">Galeria</a>
@@ -56,364 +50,308 @@
   <div class="menu" aria-hidden="true">
     <nav class="menu__links" aria-label="Menu">
       <a href="#sobre">Sobre</a>
+      <a href="#historia">Um dia no JF</a>
       <a href="#eventos">Eventos</a>
       <a href="#estrutura">Estrutura</a>
       <a href="#galeria">Galeria</a>
       <a href="#localizacao">Localização</a>
     </nav>
     <div class="menu__foot">
-      <a href="https://www.instagram.com/_eventosjf" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://wa.me/5515997615353" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://www.instagram.com/_eventosjf" target="_blank" rel="noopener"><i class="ph-fill ph-instagram-logo" aria-hidden="true"></i> Instagram</a>
+      <a href="https://wa.me/5515997615353" target="_blank" rel="noopener"><i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i> WhatsApp</a>
     </div>
   </div>
 
   <main id="conteudo">
-    <!-- ===== HERO ===== -->
+    <!-- ===== HERO: as portas se abrem para a vista do deck ===== -->
     <section class="hero" id="inicio">
-      <div class="container hero__grid">
-        <div class="hero__copy">
-          <p class="eyebrow hero__eyebrow">Espaço de eventos em Guareí-SP</p>
-          <h1 class="hero__title">
-            <span class="row"><span class="word">A festa inteira</span></span>
-            <span class="row"><em class="word">num lugar só.</em></span>
-          </h1>
-          <p class="hero__sub">
-            Gramado, deck com vista e salão completo no centro de Guareí. Feito para
-            <span class="rotator" aria-live="polite">
-              <span class="rotator__word is-active">casamentos.</span>
-              <span class="rotator__word">aniversários.</span>
-              <span class="rotator__word">chás de revelação.</span>
-              <span class="rotator__word">eventos de empresa.</span>
-              <span class="rotator__word">confraternizações.</span>
-            </span>
-          </p>
-          <div class="hero__ctas">
-            <a href="https://wa.me/5515997615353?text=Ol%C3%A1!%20Quero%20consultar%20datas%20na%20JF%20Eventos." target="_blank" rel="noopener" class="btn btn--primary magnetic">
-              <span>Consultar datas</span>
-              <i class="ph-light ph-arrow-right" aria-hidden="true"></i>
-            </a>
-            <a href="#estrutura" class="btn btn--ghost magnetic"><span>Conhecer o espaço</span></a>
+      <div class="hero__stage">
+        <figure class="hero__view">
+          <img src="img/site/lc-deck.webp" alt="Cerimônia no deck de madeira do JF, de frente para o campo" width="1600" height="1067" fetchpriority="high" />
+          <figcaption class="hero__caption">O deck do JF, de frente para o campo de Guareí</figcaption>
+        </figure>
+
+        <div class="door door--a">
+          <div class="door__inner">
+            <p class="eyebrow">Espaço de eventos em Guareí-SP</p>
+            <h1 class="hero__title">
+              <span class="hero__line"><span class="hero__word">A festa</span></span>
+              <span class="hero__line"><span class="hero__word">inteira</span></span>
+              <span class="visually-hidden"> num lugar só.</span>
+            </h1>
+            <p class="hero__sub">Gramado, deck com vista e salão completo no centro de Guareí.</p>
           </div>
+          <span class="door__handle" aria-hidden="true"></span>
         </div>
 
-        <div class="hero__visual">
-          <!-- Cada foto acompanha a palavra que gira no texto ao lado -->
-          <div class="arch hero__arch">
-            <img class="is-active" src="img/site/lc-casal-ceu.webp" alt="Noivos no deck do JF com o céu e o campo ao fundo" width="1067" height="1600" fetchpriority="high" />
-            <img src="img/site/aniversario.webp" alt="Mesa de aniversário com balões no gramado" width="1200" height="1600" loading="lazy" />
-            <img src="img/site/mesa-aniversario.webp" alt="Mesa de festa infantil decorada com tema de carrossel" width="1200" height="1600" loading="lazy" />
-            <img src="img/site/salao-2.webp" alt="Salão com mesas redondas e toalhas verdes" width="960" height="1280" loading="lazy" />
-            <img src="img/site/fora.webp" alt="Mesas montadas no gramado, sob a árvore" width="960" height="1280" loading="lazy" />
+        <div class="door door--b">
+          <span class="door__handle" aria-hidden="true"></span>
+          <div class="door__inner">
+            <p class="hero__title hero__title--b" aria-hidden="true">
+              <span class="hero__line"><em class="hero__word">num lugar</em></span>
+              <span class="hero__line"><em class="hero__word">só.</em></span>
+            </p>
+            <div class="hero__ctas">
+              <a href="https://wa.me/5515997615353?text=Ol%C3%A1!%20Quero%20consultar%20datas%20na%20JF%20Eventos." target="_blank" rel="noopener" class="btn btn--primary magnetic">
+                <span>Consultar datas</span>
+                <i class="ph-light ph-arrow-right" aria-hidden="true"></i>
+              </a>
+              <a href="#sobre" class="btn btn--ghost magnetic"><span>Conhecer o espaço</span></a>
+            </div>
           </div>
-          <figure class="hero__float">
-            <img src="img/site/lc-buque.webp" alt="Buquê de flores sobre a mesa da cerimônia" width="1600" height="1067" />
-          </figure>
         </div>
       </div>
     </section>
 
-    <!-- ===== MARQUEE ===== -->
-    <section class="marquee" aria-label="Tipos de eventos">
-      <div class="marquee__track">
-        <div class="marquee__group">
-          <span>Casamentos</span><i class="ph-fill ph-flower" aria-hidden="true"></i><span>Aniversários</span><i class="ph-fill ph-flower" aria-hidden="true"></i><span>Chá de revelação</span><i class="ph-fill ph-flower" aria-hidden="true"></i><span>Eventos de empresa</span><i class="ph-fill ph-flower" aria-hidden="true"></i><span>Batizados</span><i class="ph-fill ph-flower" aria-hidden="true"></i><span>Formaturas</span><i class="ph-fill ph-flower" aria-hidden="true"></i><span>Confraternizações</span><i class="ph-fill ph-flower" aria-hidden="true"></i><span>Chá de bebê</span><i class="ph-fill ph-flower" aria-hidden="true"></i>
-        </div>
-        <div class="marquee__group" aria-hidden="true">
-          <span>Casamentos</span><i class="ph-fill ph-flower"></i><span>Aniversários</span><i class="ph-fill ph-flower"></i><span>Chá de revelação</span><i class="ph-fill ph-flower"></i><span>Eventos de empresa</span><i class="ph-fill ph-flower"></i><span>Batizados</span><i class="ph-fill ph-flower"></i><span>Formaturas</span><i class="ph-fill ph-flower"></i><span>Confraternizações</span><i class="ph-fill ph-flower"></i><span>Chá de bebê</span><i class="ph-fill ph-flower"></i>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== SOBRE ===== -->
+    <!-- ===== SOBRE: frase com fotos dentro do texto ===== -->
     <section class="about" id="sobre">
-      <div class="container about__grid">
-        <h2 class="about__lead reveal-words">
-          Um espaço no centro de Guareí com <em>gramado para a cerimônia</em>, deck de frente para o campo e salão para a festa. Você chama os convidados. O lugar já está pronto.
+      <div class="container">
+        <h2 class="about__lede reveal-words">
+          Um espaço no centro de Guareí com
+          <span class="pic"><img src="img/site/lc-corredor.webp" alt="" width="1600" height="1067" loading="lazy" /></span>
+          gramado para a cerimônia,
+          <span class="pic"><img src="img/site/lc-casal-ceu.webp" alt="" width="1067" height="1600" loading="lazy" /></span>
+          deck de frente para o campo e
+          <span class="pic"><img src="img/site/salao.webp" alt="" width="960" height="1280" loading="lazy" /></span>
+          salão para a festa.
         </h2>
-        <figure class="about__img about__img--a">
-          <div class="about__frame"><img src="img/site/porta-2.webp" alt="Entrada do salão com tapete vermelho e portal de flores" width="960" height="1280" loading="lazy" /></div>
-          <figcaption>A entrada do salão</figcaption>
-        </figure>
-        <figure class="about__img about__img--b">
-          <div class="about__frame"><img src="img/site/lc-deck.webp" alt="Cerimônia no deck de madeira com o campo ao fundo" width="1600" height="1067" loading="lazy" /></div>
-          <figcaption>O deck, na hora do sim</figcaption>
-        </figure>
+        <div class="about__foot fade-up">
+          <p>Você chama os convidados. <em>O lugar já está pronto.</em></p>
+          <a href="#estrutura" class="link-arrow">Ver a estrutura <i class="ph-light ph-arrow-down-right" aria-hidden="true"></i></a>
+        </div>
       </div>
     </section>
 
-    <!-- ===== UM DIA NO JF (casamento real) ===== -->
+    <!-- ===== UM DIA NO JF: casamento real, do fim da tarde à festa ===== -->
     <section class="story" id="historia" aria-labelledby="story-title">
-      <div class="container story__intro">
-        <p class="eyebrow">Casamento real</p>
-        <h2 class="title" id="story-title">Lucas e Cássia: <em>um dia inteiro</em> no JF</h2>
-        <p class="story__lead">Da cerimônia no fim da tarde até a última música. Estas são as fotos do casamento deles, feito todo aqui.</p>
-      </div>
-
-      <div class="story__chapters">
-        <article class="chap chap--tarde" data-moment="Fim de tarde">
-          <header class="chap__head">
-            <h3>Fim de tarde</h3>
-            <p>Cadeiras no gramado, corredor de flores e o campo inteiro de fundo. A cerimônia começa ao ar livre.</p>
-          </header>
-          <div class="chap__photos">
-            <figure class="ph ph--main"><img src="img/site/lc-corredor.webp" alt="Corredor da cerimônia com cadeiras brancas e vasos de flores" width="1600" height="1067" loading="lazy" /></figure>
-            <figure class="ph ph--side"><img src="img/site/lc-arco.webp" alt="Arco de madeira com flores abrindo para o corredor" width="1067" height="1600" loading="lazy" /></figure>
-            <figure class="ph ph--low"><img src="img/site/lc-chegada.webp" alt="Noiva chegando de braço dado com o pai" width="1600" height="1067" loading="lazy" /></figure>
+      <div class="story__stage">
+        <div class="story__track">
+          <div class="story__intro">
+            <p class="eyebrow">Casamento real</p>
+            <h2 class="title" id="story-title">Lucas e Cássia: <em>um dia inteiro</em> no JF</h2>
+            <p class="story__lead">Da cerimônia no fim da tarde até a última música. Estas são as fotos do casamento deles, feito todo aqui.</p>
           </div>
-        </article>
 
-        <article class="chap chap--sim" data-moment="O sim">
-          <header class="chap__head">
-            <h3>O sim</h3>
-            <p>No deck, de frente para a paisagem, com padrinhos e família bem perto.</p>
-          </header>
-          <div class="chap__photos">
-            <figure class="ph ph--main"><img src="img/site/lc-votos.webp" alt="Noivos de mãos dadas no deck durante os votos" width="1600" height="1067" loading="lazy" /></figure>
-            <figure class="ph ph--side"><img src="img/site/lc-sorriso.webp" alt="Noiva sorrindo para o noivo" width="1600" height="1067" loading="lazy" /></figure>
-            <figure class="ph ph--low"><img src="img/site/lc-aliancas.webp" alt="Mãos dos noivos com as alianças" width="1600" height="1067" loading="lazy" /></figure>
-          </div>
-        </article>
-
-        <article class="chap chap--sol" data-moment="Pôr do sol">
-          <header class="chap__head">
-            <h3>Pôr do sol</h3>
-            <p>Saída debaixo de pétalas e as primeiras fotos de casados, com o céu mudando de cor.</p>
-          </header>
-          <div class="chap__photos">
-            <figure class="ph ph--main"><img src="img/site/lc-saida.webp" alt="Noivos se beijando na saída, com convidados jogando pétalas" width="1600" height="1067" loading="lazy" /></figure>
-            <figure class="ph ph--side"><img src="img/site/lc-casal-ceu.webp" alt="Noivos de braços dados no deck" width="1067" height="1600" loading="lazy" /></figure>
-            <figure class="ph ph--low"><img src="img/site/lc-casal.webp" alt="Noivos de testa colada" width="1600" height="1067" loading="lazy" /></figure>
-          </div>
-        </article>
-
-        <article class="chap chap--salao" data-moment="Recepção">
-          <header class="chap__head">
-            <h3>Recepção</h3>
-            <p>Mesa de doces, bolo, jantar e o salão arrumado para receber todo mundo com conforto.</p>
-          </header>
-          <div class="chap__photos">
-            <figure class="ph ph--main"><img src="img/site/lc-cadeiras-noivos.webp" alt="Cadeiras dos noivos decoradas com flores e plaquinhas" width="1600" height="1067" loading="lazy" /></figure>
-            <figure class="ph ph--side"><img src="img/site/lc-bolo.webp" alt="Bolo de casamento de três andares com luzes ao fundo" width="1067" height="1600" loading="lazy" /></figure>
-            <figure class="ph ph--low"><img src="img/site/lc-chef.webp" alt="Cozinheiro preparando o jantar no buffet" width="1600" height="1067" loading="lazy" /></figure>
-          </div>
-        </article>
-
-        <article class="chap chap--noite" data-moment="Noite">
-          <header class="chap__head">
-            <h3>Noite</h3>
-            <p>Com o céu escuro, o deck vira cenário para as fotos mais bonitas do dia.</p>
-          </header>
-          <div class="chap__photos">
-            <figure class="ph ph--main"><img src="img/site/lc-veu-voando.webp" alt="Véu da noiva voando sobre o deck à noite" width="1600" height="1067" loading="lazy" /></figure>
-            <figure class="ph ph--side"><img src="img/site/lc-noiva-noite.webp" alt="Retrato da noiva à noite" width="1067" height="1600" loading="lazy" /></figure>
-            <figure class="ph ph--low"><img src="img/site/lc-veu.webp" alt="Noivos se beijando debaixo do véu" width="1600" height="1067" loading="lazy" /></figure>
-          </div>
-        </article>
-
-        <article class="chap chap--festa" data-moment="Festa">
-          <header class="chap__head">
-            <h3>Festa</h3>
-            <p>Pista cheia, buquê jogado e brinde até a última música.</p>
-          </header>
-          <div class="chap__photos">
-            <figure class="ph ph--main"><img src="img/site/lc-buque-festa.webp" alt="Noiva segurando o buquê na pista, com as madrinhas atrás" width="1600" height="1067" loading="lazy" /></figure>
-            <figure class="ph ph--side"><img src="img/site/lc-danca.webp" alt="Noivos dançando sob luz roxa" width="1600" height="1067" loading="lazy" /></figure>
-            <figure class="ph ph--low"><img src="img/site/lc-madrinhas.webp" alt="Madrinhas de rosa posando na pista xadrez" width="1600" height="1067" loading="lazy" /></figure>
-          </div>
-        </article>
-      </div>
-
-      <div class="container story__end">
-        <p>O próximo dia inteiro <em>pode ser o seu.</em></p>
-      </div>
-
-      <!-- Relógio de sol: mostra em que momento do dia a história está -->
-      <div class="sundial" aria-hidden="true">
-        <svg viewBox="0 0 120 64">
-          <path class="sundial__arc" d="M8 58 A52 52 0 0 1 112 58" />
-          <line class="sundial__horizon" x1="0" y1="58" x2="120" y2="58" />
-          <circle class="sundial__body" r="6" cx="8" cy="58" />
-        </svg>
-        <span class="sundial__label">Fim de tarde</span>
-      </div>
-    </section>
-
-    <!-- ===== EVENTOS ===== -->
-    <section class="events" id="eventos">
-      <div class="container events__grid">
-        <div class="events__side">
-          <h2 class="title">Seu evento, <em>do seu jeito</em></h2>
-          <ul class="events__list">
-            <li>
-              <button class="ev is-active" type="button" data-index="0" aria-pressed="true">
-                <span class="ev__name">Casamentos</span>
-                <span class="ev__more"><span class="ev__desc">Cerimônia ao ar livre e recepção no salão, no mesmo lugar.</span><img class="ev__thumb" src="img/site/casamento.webp" alt="" width="805" height="1280" loading="lazy" /></span>
-              </button>
-            </li>
-            <li>
-              <button class="ev" type="button" data-index="1" aria-pressed="false">
-                <span class="ev__name">Aniversários</span>
-                <span class="ev__more"><span class="ev__desc">Do primeiro aninho aos 15 anos, com espaço de sobra para a festa.</span><img class="ev__thumb" src="img/site/aniversario.webp" alt="" width="1200" height="1600" loading="lazy" /></span>
-              </button>
-            </li>
-            <li>
-              <button class="ev" type="button" data-index="2" aria-pressed="false">
-                <span class="ev__name">Chá de revelação</span>
-                <span class="ev__more"><span class="ev__desc">Menino ou menina? A família reunida para descobrir junto.</span><img class="ev__thumb" src="img/site/mesa-aniversario.webp" alt="" width="1200" height="1600" loading="lazy" /></span>
-              </button>
-            </li>
-            <li>
-              <button class="ev" type="button" data-index="3" aria-pressed="false">
-                <span class="ev__name">Eventos de empresa</span>
-                <span class="ev__more"><span class="ev__desc">Palestras, treinamentos e lançamentos com conforto para a equipe.</span><img class="ev__thumb" src="img/site/salao-2.webp" alt="" width="960" height="1280" loading="lazy" /></span>
-              </button>
-            </li>
-            <li>
-              <button class="ev" type="button" data-index="4" aria-pressed="false">
-                <span class="ev__name">Batizados e chás</span>
-                <span class="ev__more"><span class="ev__desc">Chá de bebê, chá bar, batizados e celebrações em família.</span><img class="ev__thumb" src="img/site/mesa-6.webp" alt="" width="1200" height="1600" loading="lazy" /></span>
-              </button>
-            </li>
-            <li>
-              <button class="ev" type="button" data-index="5" aria-pressed="false">
-                <span class="ev__name">Confraternizações</span>
-                <span class="ev__more"><span class="ev__desc">Fim de ano, formaturas e encontros com churrasco.</span><img class="ev__thumb" src="img/site/fora.webp" alt="" width="960" height="1280" loading="lazy" /></span>
-              </button>
-            </li>
-          </ul>
-        </div>
-        <div class="events__preview" aria-hidden="true">
-          <div class="arch events__arch">
-            <img class="is-active" src="img/site/casamento.webp" alt="" width="805" height="1280" loading="lazy" />
-            <img src="img/site/aniversario.webp" alt="" width="1200" height="1600" loading="lazy" />
-            <img src="img/site/mesa-aniversario.webp" alt="" width="1200" height="1600" loading="lazy" />
-            <img src="img/site/salao-2.webp" alt="" width="960" height="1280" loading="lazy" />
-            <img src="img/site/mesa-6.webp" alt="" width="1200" height="1600" loading="lazy" />
-            <img src="img/site/fora.webp" alt="" width="960" height="1280" loading="lazy" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== ESTRUTURA (bento) ===== -->
-    <section class="features" id="estrutura">
-      <div class="container">
-        <h2 class="title features__title">Tudo pronto para <em>a sua festa</em></h2>
-        <div class="bento">
-          <article class="cell cell--img cell--salao">
-            <img src="img/site/salao.webp" alt="Salão com mesas redondas, toalhas douradas e cadeiras brancas" width="960" height="1280" loading="lazy" />
-            <div class="cell__body">
-              <h3>Salão amplo</h3>
-              <p>Arejado, com luz quente e espaço para montar do jeito que você quiser.</p>
+          <article class="chap" data-moment="Fim de tarde">
+            <header class="chap__head">
+              <h3>Fim de tarde</h3>
+              <p>Cadeiras no gramado, corredor de flores e o campo inteiro de fundo. A cerimônia começa ao ar livre.</p>
+            </header>
+            <div class="chap__photos">
+              <figure class="ph ph--main"><img src="img/site/lc-corredor.webp" alt="Corredor da cerimônia com cadeiras brancas e vasos de flores" width="1600" height="1067" loading="lazy" /></figure>
+              <figure class="ph ph--side"><img src="img/site/lc-arco.webp" alt="Arco de madeira com flores abrindo para o corredor" width="1067" height="1600" loading="lazy" /></figure>
+              <figure class="ph ph--low"><img src="img/site/lc-chegada.webp" alt="Noiva chegando de braço dado com o pai" width="1600" height="1067" loading="lazy" /></figure>
             </div>
           </article>
-          <article class="cell cell--img cell--deck">
-            <img src="img/site/lc-deck.webp" alt="Deck de madeira com vista para o campo" width="1600" height="1067" loading="lazy" />
-            <div class="cell__body">
-              <h3>Deck com vista</h3>
-              <p>Para a cerimônia ou para as fotos, de frente para o campo.</p>
-            </div>
-          </article>
-          <article class="cell cell--img cell--gramado">
-            <img src="img/site/cadeiras.webp" alt="Cadeiras brancas enfileiradas no gramado" width="1200" height="1600" loading="lazy" />
-            <div class="cell__body">
-              <h3>Área externa</h3>
-              <p>Gramado e árvores para cerimônias e festas ao ar livre.</p>
-            </div>
-          </article>
-          <article class="cell cell--plain cell--forest">
-            <i class="ph-light ph-fire cell__icon" aria-hidden="true"></i>
-            <h3>Churrasqueira</h3>
-            <p>Para confraternizações e almoços em família.</p>
-          </article>
-          <article class="cell cell--img cell--mesas">
-            <img src="img/site/salao-3.webp" alt="Mesas postas com toalhas verdes no salão" width="960" height="1280" loading="lazy" />
-            <div class="cell__body">
-              <h3>Mesas e cadeiras</h3>
-              <p>Mobiliário no próprio espaço. Menos aluguel, menos preocupação.</p>
-            </div>
-          </article>
-          <article class="cell cell--plain cell--blush">
-            <i class="ph-light ph-snowflake cell__icon" aria-hidden="true"></i>
-            <h3>Freezers</h3>
-            <p>Bebida gelada do início ao fim.</p>
-          </article>
-        </div>
-      </div>
-    </section>
 
-    <!-- ===== GALERIA ===== -->
-    <section class="gallery" id="galeria">
-      <div class="container">
-        <div class="gallery__head">
-          <h2 class="title">Montagens que <em>já passaram por aqui</em></h2>
-          <div class="chips" role="group" aria-label="Filtrar fotos">
-            <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">Tudo</button>
-            <button class="chip" type="button" data-filter="decor" aria-pressed="false">Decoração</button>
-            <button class="chip" type="button" data-filter="noivos" aria-pressed="false">Noivos</button>
+          <article class="chap" data-moment="O sim">
+            <header class="chap__head">
+              <h3>O sim</h3>
+              <p>No deck, de frente para a paisagem, com padrinhos e família bem perto.</p>
+            </header>
+            <div class="chap__photos">
+              <figure class="ph ph--main"><img src="img/site/lc-votos.webp" alt="Noivos de mãos dadas no deck durante os votos" width="1600" height="1067" loading="lazy" /></figure>
+              <figure class="ph ph--side"><img src="img/site/lc-sorriso.webp" alt="Noiva sorrindo para o noivo" width="1600" height="1067" loading="lazy" /></figure>
+              <figure class="ph ph--low"><img src="img/site/lc-aliancas.webp" alt="Mãos dos noivos com as alianças" width="1600" height="1067" loading="lazy" /></figure>
+            </div>
+          </article>
+
+          <article class="chap" data-moment="Pôr do sol">
+            <header class="chap__head">
+              <h3>Pôr do sol</h3>
+              <p>Saída debaixo de pétalas e as primeiras fotos de casados, com o céu mudando de cor.</p>
+            </header>
+            <div class="chap__photos">
+              <figure class="ph ph--main"><img src="img/site/lc-saida.webp" alt="Noivos se beijando na saída, com convidados jogando pétalas" width="1600" height="1067" loading="lazy" /></figure>
+              <figure class="ph ph--side"><img src="img/site/lc-casal-ceu.webp" alt="Noivos de braços dados no deck" width="1067" height="1600" loading="lazy" /></figure>
+              <figure class="ph ph--low"><img src="img/site/lc-casal.webp" alt="Noivos de testa colada" width="1600" height="1067" loading="lazy" /></figure>
+            </div>
+          </article>
+
+          <article class="chap" data-moment="Recepção">
+            <header class="chap__head">
+              <h3>Recepção</h3>
+              <p>Mesa de doces, bolo, jantar e o salão arrumado para receber todo mundo com conforto.</p>
+            </header>
+            <div class="chap__photos">
+              <figure class="ph ph--main"><img src="img/site/lc-cadeiras-noivos.webp" alt="Cadeiras dos noivos decoradas com flores e plaquinhas" width="1600" height="1067" loading="lazy" /></figure>
+              <figure class="ph ph--side"><img src="img/site/lc-bolo.webp" alt="Bolo de casamento de três andares com luzes ao fundo" width="1067" height="1600" loading="lazy" /></figure>
+              <figure class="ph ph--low"><img src="img/site/lc-chef.webp" alt="Cozinheiro preparando o jantar no buffet" width="1600" height="1067" loading="lazy" /></figure>
+            </div>
+          </article>
+
+          <article class="chap" data-moment="Noite">
+            <header class="chap__head">
+              <h3>Noite</h3>
+              <p>Com o céu escuro, o deck vira cenário para as fotos mais bonitas do dia.</p>
+            </header>
+            <div class="chap__photos">
+              <figure class="ph ph--main"><img src="img/site/lc-veu-voando.webp" alt="Véu da noiva voando sobre o deck à noite" width="1600" height="1067" loading="lazy" /></figure>
+              <figure class="ph ph--side"><img src="img/site/lc-noiva-noite.webp" alt="Retrato da noiva à noite" width="1067" height="1600" loading="lazy" /></figure>
+              <figure class="ph ph--low"><img src="img/site/lc-veu.webp" alt="Noivos se beijando debaixo do véu" width="1600" height="1067" loading="lazy" /></figure>
+            </div>
+          </article>
+
+          <article class="chap" data-moment="Festa">
+            <header class="chap__head">
+              <h3>Festa</h3>
+              <p>Pista cheia, buquê jogado e brinde até a última música.</p>
+            </header>
+            <div class="chap__photos">
+              <figure class="ph ph--main"><img src="img/site/lc-buque-festa.webp" alt="Noiva segurando o buquê na pista, com as madrinhas atrás" width="1600" height="1067" loading="lazy" /></figure>
+              <figure class="ph ph--side"><img src="img/site/lc-danca.webp" alt="Noivos dançando sob luz roxa" width="1600" height="1067" loading="lazy" /></figure>
+              <figure class="ph ph--low"><img src="img/site/lc-madrinhas.webp" alt="Madrinhas de rosa posando na pista xadrez" width="1600" height="1067" loading="lazy" /></figure>
+            </div>
+          </article>
+
+          <div class="story__end">
+            <p>O próximo dia inteiro <em>pode ser o seu.</em></p>
+            <a href="https://wa.me/5515997615353?text=Ol%C3%A1!%20Quero%20consultar%20datas%20na%20JF%20Eventos." target="_blank" rel="noopener" class="btn btn--primary magnetic"><span>Consultar datas</span></a>
           </div>
         </div>
-        <div class="gallery__grid">
-          <figure class="g" data-cat="decor"><img src="img/site/mesa.webp" alt="Mesa de doces com flores brancas e lâmpadas penduradas" width="1280" height="852" loading="lazy" /></figure>
-          <figure class="g" data-cat="noivos"><img src="img/site/noivos-porta.webp" alt="Noivos se beijando entre portas de madeira com flores" width="1032" height="1280" loading="lazy" /></figure>
-          <figure class="g" data-cat="decor"><img src="img/site/porta.webp" alt="Porta de madeira com arranjo de flores e luzes" width="960" height="1280" loading="lazy" /></figure>
-          <figure class="g" data-cat="decor"><img src="img/site/mesa-3.webp" alt="Mesa de bolo com cortina de luzes e plantas" width="960" height="1280" loading="lazy" /></figure>
-          <figure class="g" data-cat="noivos"><img src="img/site/noivos.webp" alt="Noivos saindo da cerimônia no gramado" width="1002" height="1280" loading="lazy" /></figure>
-          <figure class="g" data-cat="decor"><img src="img/site/mesa-2.webp" alt="Mesa de doces rústica com portas antigas e samambaias" width="1280" height="960" loading="lazy" /></figure>
-          <figure class="g" data-cat="decor"><img src="img/site/mesa-5.webp" alt="Bolo de casamento com doces e flores brancas" width="960" height="1280" loading="lazy" /></figure>
-          <figure class="g" data-cat="noivos"><img src="img/site/noiva.webp" alt="Noiva diante da mesa de doces" width="902" height="1280" loading="lazy" /></figure>
-          <figure class="g" data-cat="decor"><img src="img/site/porta-2.webp" alt="Tapete vermelho levando à porta do salão" width="960" height="1280" loading="lazy" /></figure>
-          <figure class="g" data-cat="decor"><img src="img/site/decoracao.webp" alt="Decoração rústica com feno, escada de madeira e luzes" width="960" height="1280" loading="lazy" /></figure>
-          <figure class="g" data-cat="noivos"><img src="img/site/noivos-deck-2.webp" alt="Noivos abraçados no deck em dia nublado" width="981" height="1280" loading="lazy" /></figure>
-          <figure class="g" data-cat="decor"><img src="img/site/mesa-4.webp" alt="Mesa de doces com bolo branco e letreiro" width="1280" height="960" loading="lazy" /></figure>
-          <figure class="g" data-cat="decor"><img src="img/site/decoracao-2.webp" alt="Mesa de lembrancinhas no jardim com quadro de fotos" width="1200" height="1600" loading="lazy" /></figure>
-          <figure class="g" data-cat="noivos"><img src="img/site/casamento.webp" alt="Noiva com véu longo diante do altar ao ar livre" width="805" height="1280" loading="lazy" /></figure>
-          <figure class="g" data-cat="noivos"><img src="img/site/noivos-deck.webp" alt="Noivos se beijando no deck ao entardecer" width="1053" height="1280" loading="lazy" /></figure>
-        </div>
-        <a href="https://www.instagram.com/_eventosjf" target="_blank" rel="noopener" class="link-arrow gallery__more">Ver mais no Instagram <i class="ph-light ph-arrow-up-right" aria-hidden="true"></i></a>
-      </div>
-    </section>
 
-    <!-- ===== COMO FUNCIONA ===== -->
-    <section class="steps">
-      <div class="container">
-        <h2 class="title steps__title">Da ideia à festa em <em>quatro passos</em></h2>
-        <div class="steps__wrap">
-          <svg class="steps__line" viewBox="0 0 1000 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 C 125 0, 125 40, 250 20 S 375 0, 500 20 S 625 40, 750 20 S 875 0, 1000 20"/></svg>
-          <ol class="steps__list">
-            <li class="step"><span class="step__dot">1</span><h3>Chame no WhatsApp</h3><p>Conte o tipo de evento, a data e o número de convidados.</p></li>
-            <li class="step"><span class="step__dot">2</span><h3>Visite o espaço</h3><p>Agende uma visita e conheça o salão, o deck e a área externa.</p></li>
-            <li class="step"><span class="step__dot">3</span><h3>Reserve a data</h3><p>Garanta o seu dia e comece a planejar os detalhes.</p></li>
-            <li class="step"><span class="step__dot">4</span><h3>Celebre</h3><p>Chegou o grande dia. É só aproveitar com quem você ama.</p></li>
+        <!-- Linha do horizonte: o sol (e depois a lua) mostra o momento do dia -->
+        <div class="horizon" aria-hidden="true">
+          <div class="horizon__line"><span class="horizon__sun"></span></div>
+          <ol class="horizon__marks">
+            <li>Fim de tarde</li><li>O sim</li><li>Pôr do sol</li><li>Recepção</li><li>Noite</li><li>Festa</li>
           </ol>
         </div>
       </div>
     </section>
 
-    <!-- ===== CHAMADA FINAL ===== -->
+    <!-- ===== EVENTOS: faixas que se abrem ===== -->
+    <section class="events" id="eventos">
+      <div class="container">
+        <div class="events__head">
+          <h2 class="title">Seu evento, <em>do seu jeito</em></h2>
+        </div>
+        <div class="strips">
+          <button class="strip is-open" type="button" aria-expanded="true">
+            <img src="img/site/casamento.webp" alt="" width="805" height="1280" loading="lazy" />
+            <span class="strip__name">Casamentos</span>
+            <span class="strip__desc">Cerimônia ao ar livre e recepção no salão, no mesmo lugar.</span>
+          </button>
+          <button class="strip" type="button" aria-expanded="false">
+            <img src="img/site/aniversario.webp" alt="" width="1200" height="1600" loading="lazy" />
+            <span class="strip__name">Aniversários</span>
+            <span class="strip__desc">Do primeiro aninho aos 15 anos, com espaço de sobra para a festa.</span>
+          </button>
+          <button class="strip" type="button" aria-expanded="false">
+            <img src="img/site/mesa-aniversario.webp" alt="" width="1200" height="1600" loading="lazy" />
+            <span class="strip__name">Chá de revelação</span>
+            <span class="strip__desc">Menino ou menina? A família reunida para descobrir junto.</span>
+          </button>
+          <button class="strip" type="button" aria-expanded="false">
+            <img src="img/site/salao-2.webp" alt="" width="960" height="1280" loading="lazy" />
+            <span class="strip__name">Eventos de empresa</span>
+            <span class="strip__desc">Palestras, treinamentos e lançamentos com conforto para a equipe.</span>
+          </button>
+          <button class="strip" type="button" aria-expanded="false">
+            <img src="img/site/mesa-6.webp" alt="" width="1200" height="1600" loading="lazy" />
+            <span class="strip__name">Batizados e chás</span>
+            <span class="strip__desc">Chá de bebê, chá bar, batizados e celebrações em família.</span>
+          </button>
+          <button class="strip" type="button" aria-expanded="false">
+            <img src="img/site/fora.webp" alt="" width="960" height="1280" loading="lazy" />
+            <span class="strip__name">Confraternizações</span>
+            <span class="strip__desc">Fim de ano, formaturas e encontros com churrasco.</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ESTRUTURA: foto fixa que troca conforme a leitura ===== -->
+    <section class="spaces" id="estrutura">
+      <div class="container spaces__grid">
+        <div class="spaces__media" aria-hidden="true">
+          <img class="is-active" src="img/site/salao.webp" alt="" width="960" height="1280" loading="lazy" />
+          <img src="img/site/lc-deck.webp" alt="" width="1600" height="1067" loading="lazy" />
+          <img src="img/site/cadeiras.webp" alt="" width="1200" height="1600" loading="lazy" />
+          <img src="img/site/salao-3.webp" alt="" width="960" height="1280" loading="lazy" />
+        </div>
+        <div class="spaces__list">
+          <h2 class="title">Tudo pronto para <em>a sua festa</em></h2>
+          <article class="space">
+            <img class="space__img" src="img/site/salao.webp" alt="Salão com mesas redondas, toalhas douradas e cadeiras brancas" width="960" height="1280" loading="lazy" />
+            <h3>Salão amplo</h3>
+            <p>Arejado, com luz quente e espaço para montar do jeito que você quiser.</p>
+          </article>
+          <article class="space">
+            <img class="space__img" src="img/site/lc-deck.webp" alt="Deck de madeira com vista para o campo" width="1600" height="1067" loading="lazy" />
+            <h3>Deck com vista</h3>
+            <p>Para a cerimônia ou para as fotos, de frente para o campo.</p>
+          </article>
+          <article class="space">
+            <img class="space__img" src="img/site/cadeiras.webp" alt="Cadeiras brancas enfileiradas no gramado" width="1200" height="1600" loading="lazy" />
+            <h3>Área externa</h3>
+            <p>Gramado e árvores para cerimônias e festas ao ar livre.</p>
+          </article>
+          <article class="space">
+            <img class="space__img" src="img/site/salao-3.webp" alt="Mesas postas com toalhas verdes no salão" width="960" height="1280" loading="lazy" />
+            <h3>Mesas e cadeiras</h3>
+            <p>Mobiliário no próprio espaço. Menos aluguel, menos preocupação.</p>
+          </article>
+          <ul class="spaces__extra">
+            <li><i class="ph-light ph-fire" aria-hidden="true"></i> Churrasqueira</li>
+            <li><i class="ph-light ph-snowflake" aria-hidden="true"></i> Freezers</li>
+            <li><i class="ph-light ph-map-pin" aria-hidden="true"></i> No centro de Guareí</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GALERIA: duas fileiras em sentidos opostos ===== -->
+    <section class="gallery" id="galeria">
+      <div class="container gallery__head">
+        <h2 class="title">Montagens que <em>já passaram por aqui</em></h2>
+        <a href="https://www.instagram.com/_eventosjf" target="_blank" rel="noopener" class="link-arrow"><i class="ph-fill ph-instagram-logo" aria-hidden="true"></i> Ver mais no Instagram</a>
+      </div>
+      <div class="reel reel--a">
+        <figure class="g"><img src="img/site/mesa.webp" alt="Mesa de doces com flores brancas e lâmpadas penduradas" width="1280" height="852" loading="lazy" /></figure>
+        <figure class="g"><img src="img/site/porta.webp" alt="Porta de madeira com arranjo de flores e luzes" width="960" height="1280" loading="lazy" /></figure>
+        <figure class="g"><img src="img/site/mesa-3.webp" alt="Mesa de bolo com cortina de luzes e plantas" width="960" height="1280" loading="lazy" /></figure>
+        <figure class="g"><img src="img/site/mesa-2.webp" alt="Mesa de doces rústica com portas antigas e samambaias" width="1280" height="960" loading="lazy" /></figure>
+        <figure class="g"><img src="img/site/decoracao.webp" alt="Decoração rústica com feno, escada de madeira e luzes" width="960" height="1280" loading="lazy" /></figure>
+        <figure class="g"><img src="img/site/mesa-4.webp" alt="Mesa de doces com bolo branco e letreiro" width="1280" height="960" loading="lazy" /></figure>
+        <figure class="g"><img src="img/site/porta-2.webp" alt="Tapete vermelho levando à porta do salão" width="960" height="1280" loading="lazy" /></figure>
+        <figure class="g"><img src="img/site/mesa-5.webp" alt="Bolo de casamento com doces e flores brancas" width="960" height="1280" loading="lazy" /></figure>
+      </div>
+      <div class="reel reel--b">
+        <figure class="g"><img src="img/site/noivos-porta.webp" alt="Noivos se beijando entre portas de madeira com flores" width="1032" height="1280" loading="lazy" /></figure>
+        <figure class="g"><img src="img/site/decoracao-2.webp" alt="Mesa de lembrancinhas no jardim com quadro de fotos" width="1200" height="1600" loading="lazy" /></figure>
+        <figure class="g"><img src="img/site/noivos.webp" alt="Noivos saindo da cerimônia no gramado" width="1002" height="1280" loading="lazy" /></figure>
+        <figure class="g"><img src="img/site/noiva.webp" alt="Noiva diante da mesa de doces" width="902" height="1280" loading="lazy" /></figure>
+        <figure class="g"><img src="img/site/noivos-deck.webp" alt="Noivos se beijando no deck ao entardecer" width="1053" height="1280" loading="lazy" /></figure>
+        <figure class="g"><img src="img/site/casamento.webp" alt="Noiva com véu longo diante do altar ao ar livre" width="805" height="1280" loading="lazy" /></figure>
+        <figure class="g"><img src="img/site/noivos-deck-2.webp" alt="Noivos abraçados no deck em dia nublado" width="981" height="1280" loading="lazy" /></figure>
+      </div>
+    </section>
+
+    <!-- ===== CHAMADA FINAL + COMO FUNCIONA ===== -->
     <section class="cta">
       <div class="cta__bg"><img src="img/site/lc-brinde.webp" alt="" width="1600" height="1067" loading="lazy" /></div>
       <canvas class="cta__confetti" aria-hidden="true"></canvas>
       <div class="container cta__inner">
-        <h2 class="cta__title">
-          <span class="cta__line"><span>Vamos</span></span>
-          <span class="cta__line"><em>celebrar?</em></span>
-        </h2>
+        <h2 class="cta__title">Vamos <em>celebrar?</em></h2>
         <p class="cta__sub">Garanta a data do seu evento antes que alguém reserve primeiro.</p>
         <a href="https://wa.me/5515997615353?text=Ol%C3%A1!%20Quero%20consultar%20datas%20na%20JF%20Eventos." target="_blank" rel="noopener" class="btn btn--primary btn--xl magnetic cta__btn">
-          <i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i>
+          <i class="ph-fill ph-whatsapp-logo btn__wa" aria-hidden="true"></i>
           <span>Consultar datas</span>
         </a>
+        <ol class="steps">
+          <li class="step"><span class="step__n">1</span><div><h3>Chame no WhatsApp</h3><p>Conte o tipo de evento, a data e o número de convidados.</p></div></li>
+          <li class="step"><span class="step__n">2</span><div><h3>Visite o espaço</h3><p>Conheça o salão, o deck e a área externa.</p></div></li>
+          <li class="step"><span class="step__n">3</span><div><h3>Reserve a data</h3><p>Garanta o seu dia e planeje os detalhes.</p></div></li>
+          <li class="step"><span class="step__n">4</span><div><h3>Celebre</h3><p>É só aproveitar com quem você ama.</p></div></li>
+        </ol>
       </div>
     </section>
 
     <!-- ===== LOCALIZAÇÃO ===== -->
     <section class="location" id="localizacao">
-      <div class="location__map">
-        <iframe title="Mapa da JF Eventos" src="https://maps.google.com/maps?q=Av.%20Ataliba%20Figueira%2C%20122%2C%20Centro%2C%20Guare%C3%AD%20-%20SP%2C%2018250-075&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <div class="container location__wrap">
-        <div class="location__panel">
+      <div class="container location__grid">
+        <div class="location__info">
           <h2 class="title">Venha nos <em>conhecer</em></h2>
           <ul class="info">
             <li>
@@ -421,15 +359,18 @@
               <div><small>Endereço</small><p>Av. Ataliba Figueira, 122, Centro<br />Guareí-SP, CEP 18.250-075</p></div>
             </li>
             <li>
-              <i class="ph-fill ph-whatsapp-logo info__ic info__ic--wa" aria-hidden="true"></i>
+              <i class="ph-fill ph-whatsapp-logo info__ic" aria-hidden="true"></i>
               <div><small>WhatsApp</small><p><a href="https://wa.me/5515997615353" target="_blank" rel="noopener">(15) 99761-5353</a></p></div>
             </li>
             <li>
-              <i class="ph-fill ph-instagram-logo info__ic info__ic--ig" aria-hidden="true"></i>
+              <i class="ph-fill ph-instagram-logo info__ic" aria-hidden="true"></i>
               <div><small>Instagram</small><p><a href="https://www.instagram.com/_eventosjf" target="_blank" rel="noopener">@_eventosjf</a></p></div>
             </li>
           </ul>
           <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Ataliba+Figueira,+122,+Centro,+Guare%C3%AD+-+SP,+18250-075" target="_blank" rel="noopener" class="btn btn--ghost magnetic"><span>Como chegar</span><i class="ph-light ph-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="location__map">
+          <iframe title="Mapa da JF Eventos" src="https://maps.google.com/maps?q=Av.%20Ataliba%20Figueira%2C%20122%2C%20Centro%2C%20Guare%C3%AD%20-%20SP%2C%2018250-075&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>
@@ -446,7 +387,7 @@
             <i class="ph-fill ph-whatsapp-logo btn__wa" aria-hidden="true"></i><span>Falar no WhatsApp</span>
           </a>
           <a href="https://www.instagram.com/_eventosjf" target="_blank" rel="noopener" class="btn btn--outline-light btn--xl magnetic">
-            <i class="ph-fill ph-instagram-logo btn__ig" aria-hidden="true"></i><span>Seguir no Instagram</span>
+            <i class="ph-fill ph-instagram-logo" aria-hidden="true"></i><span>Seguir no Instagram</span>
           </a>
         </div>
       </div>
@@ -474,6 +415,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="js/main.js?v=20"></script>
+  <script src="js/main.js?v=21"></script>
 </body>
 </html>

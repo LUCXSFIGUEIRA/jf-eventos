@@ -6,10 +6,12 @@ Landing page do **JF Eventos**, espaço para casamentos, aniversários, chá de 
 📱 WhatsApp: (15) 99761-5353 · Instagram: [@_eventosjf](https://www.instagram.com/_eventosjf)
 
 ## O que tem na página
-- **Hero** com moldura em arco (como os portais do espaço): a foto muda junto com o tipo de evento que gira no texto.
-- **Um dia no JF**: o casamento real de Lucas e Cássia contado em seis momentos (fim de tarde, o sim, pôr do sol, recepção, noite e festa). A cor da página muda com a hora do dia e um pequeno relógio de sol acompanha a rolagem.
-- **Eventos**: lista interativa; ao escolher um tipo, a foto do arco troca.
-- **Estrutura** (bento), **galeria com filtros** e lightbox, **passos**, **chamada final** com confete e **mapa**.
+- **Abertura "as portas"**: duas folhas de porta quase fechadas, com a vista do deck pela fresta. Ao rolar, as portas se abrem e a paisagem toma a tela.
+- **Sobre**: frase grande com fotinhas dentro do texto (gramado, deck, salão).
+- **Um dia no JF**: o casamento real de Lucas e Cássia em seis momentos, num percurso horizontal. O céu muda de cor do fim de tarde até a festa, e um sol (depois a lua) anda sobre a linha do horizonte.
+- **Eventos**: faixas de fotos que se abrem ao passar o mouse ou tocar.
+- **Estrutura**: foto fixa que troca conforme cada espaço é lido; **galeria** em duas fileiras que deslizam em sentidos opostos, com lightbox.
+- **Chamada final** com confete e os quatro passos para reservar, e **mapa**.
 - Modo claro e escuro automáticos (segue o sistema do visitante).
 
 ## Tecnologias

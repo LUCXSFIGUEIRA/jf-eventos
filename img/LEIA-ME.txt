@@ -13,12 +13,12 @@ PARA TROCAR UMA FOTO
    (ex.: salao.webp). Pronto: ela aparece no lugar da antiga.
 
 ONDE CADA FOTO APARECE
-- lc-*.webp ............ casamento de Lucas e Cássia (hero e "Um dia no JF")
-- aniversario, mesa-aniversario, salao-2, fora ... arco do hero e lista de eventos
-- casamento, mesa-6 ..... lista de eventos
-- porta-2, lc-deck ...... seção "Sobre"
-- salao, cadeiras, salao-3, lc-deck ... "Tudo pronto para a sua festa"
-- mesa*, porta*, decoracao*, noiva, noivos* ... galeria
+- lc-deck .............. vista que aparece quando as portas do topo se abrem
+- lc-*.webp ............ casamento de Lucas e Cássia ("Um dia no JF")
+- lc-corredor, lc-casal-ceu, salao ... fotinhas dentro da frase do "Sobre"
+- casamento, aniversario, mesa-aniversario, salao-2, mesa-6, fora ... faixas de "Seu evento"
+- salao, lc-deck, cadeiras, salao-3 ... "Tudo pronto para a sua festa"
+- mesa*, porta*, decoracao*, noiva, noivos*, casamento ... galeria (duas fileiras)
 - lc-brinde ............. fundo da chamada "Vamos celebrar?"
 - og.jpg ................ imagem que aparece ao compartilhar o link
 
