@@ -19,7 +19,7 @@ ONDE CADA FOTO APARECE
 - casamento, aniversario, mesa-aniversario, salao-2, mesa-6, fora ... faixas de "Seu evento"
 - salao, lc-deck, cadeiras, salao-3 ... "Tudo pronto para a sua festa"
 - mesa*, porta*, decoracao*, noiva, noivos*, casamento ... galeria (duas fileiras)
-- lc-brinde ............. fundo da chamada "Vamos celebrar?"
+- lc-veu-voando ......... fundo da chamada "Vamos celebrar?"
 - og.jpg ................ imagem que aparece ao compartilhar o link
 
 LOGO
