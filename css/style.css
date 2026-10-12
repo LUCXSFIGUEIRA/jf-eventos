@@ -165,8 +165,6 @@ p { text-wrap: pretty; }
 .door {
   position: absolute; top: 0; bottom: 0; width: calc(50% - var(--slit) / 2); display: flex; align-items: center;
   background-color: var(--bg);
-  /* tábuas verticais bem sutis, como a madeira das portas */
-  background-image: repeating-linear-gradient(90deg, transparent 0 calc(12.5% - 1px), var(--line) calc(12.5% - 1px) 12.5%);
   will-change: transform;
 }
 .door--a { left: 0; justify-content: flex-end; text-align: right; box-shadow: 12px 0 40px -20px rgba(0, 0, 0, .5); }
@@ -186,9 +184,11 @@ p { text-wrap: pretty; }
 .about { padding: clamp(7rem, 13vw, 11rem) 0 clamp(6rem, 11vw, 9rem); }
 .about__lede { font-size: clamp(2rem, 4.4vw, 4.1rem); line-height: 1.16; letter-spacing: -.04em; max-width: 24ch; }
 .about__lede .w { display: inline-block; opacity: .16; }
-.pic { display: inline-block; width: 2.1em; height: .86em; vertical-align: -.08em; margin: 0 .08em; border-radius: var(--r); overflow: hidden; transition: width .7s var(--ease); }
-.pic img { width: 100%; height: 100%; object-fit: cover; }
-.pic:hover { width: 3.6em; }
+.about__trio { display: grid; grid-template-columns: 1.4fr 1fr 1fr; grid-auto-rows: clamp(260px, 30vw, 440px); gap: .8rem; margin-top: clamp(3rem, 6vw, 5rem); }
+.about__pic { position: relative; overflow: hidden; border-radius: var(--r); }
+.about__pic img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.about__pic:hover img { transform: scale(1.04); }
+.about__pic figcaption { position: absolute; left: 1rem; bottom: .9rem; padding: .35rem .7rem; border-radius: var(--r); background: color-mix(in srgb, var(--bg) 88%, transparent); color: var(--ink); font-size: .85rem; font-weight: 500; }
 .about__foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; margin-top: clamp(3rem, 6vw, 5rem); padding-top: 2rem; border-top: 1px solid var(--line); }
 .about__foot p { font-size: clamp(1.2rem, 1.8vw, 1.6rem); letter-spacing: -.02em; }
 
@@ -357,14 +357,12 @@ p { text-wrap: pretty; }
 @media (max-width: 860px) {
   /* hero: folhas de cima e de baixo, fresta horizontal */
   .hero { --slit: 24vh; }
-  .door { width: 100%; height: calc(50% - var(--slit) / 2); align-items: flex-end; background-image: repeating-linear-gradient(0deg, transparent 0 calc(25% - 1px), var(--line) calc(25% - 1px) 25%); }
+  .door { width: 100%; height: calc(50% - var(--slit) / 2); align-items: flex-end;}
   .door--a { top: 0; bottom: auto; justify-content: flex-start; text-align: left; box-shadow: 0 12px 40px -20px rgba(0, 0, 0, .5); }
   .door--b { top: auto; bottom: 0; align-items: flex-start; box-shadow: 0 -12px 40px -20px rgba(0, 0, 0, .5); }
   .door__inner { width: 100%; max-width: none; padding: calc(var(--nav-h) + .5rem) var(--gutter) 1.2rem; background: transparent; }
   .door--b .door__inner { padding: 1.2rem var(--gutter) 1.5rem; }
-  .door__handle { top: auto; left: 50% !important; right: auto !important; width: 64px; height: 4px; margin: 0 0 0 -32px; }
-  .door--a .door__handle { bottom: 10px; }
-  .door--b .door__handle { top: 10px; }
+  .door__handle { display: none; }
   .door--a .eyebrow { display: none; }
   .hero__title { font-size: clamp(2.6rem, 12vw, 4rem); }
   .hero__sub { display: none; }
@@ -393,7 +391,8 @@ p { text-wrap: pretty; }
   .footer__row { flex-direction: column; }
   .wa-float { width: 54px; height: 54px; right: 16px; bottom: 16px; }
   .lightbox__nav { top: auto; bottom: 24px; transform: none; }
-  .pic:hover { width: 2.1em; }
+  .about__trio { grid-template-columns: 1fr 1fr; grid-auto-rows: 58vw; }
+  .about__pic:first-child { grid-column: span 2; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -113,7 +113,7 @@
             const s = document.createElement('span'); s.className = cls; s.textContent = tok; frag.appendChild(s);
           });
           child.replaceWith(frag);
-        } else if (child.nodeType === 1 && !child.classList.contains('pic')) walk(child);
+        } else if (child.nodeType === 1) walk(child);
       });
     };
     walk(el);
@@ -151,18 +151,12 @@
     mm.add('(max-width: 860px)', () => { build('yPercent', -101, 101); });
   }
 
-  /* ---------- Sobre: palavras acendem e as fotinhas aparecem ---------- */
+  /* ---------- Sobre: palavras acendem com a leitura, fotos sobem ---------- */
   function initAbout() {
     if (reduceMotion) return;
     const lede = $('.about__lede');
-    const words = wrapWords(lede);
-    const tl = gsap.timeline({ scrollTrigger: { trigger: lede, start: 'top 80%', end: 'bottom 45%', scrub: true } });
-    tl.to(words, { opacity: 1, stagger: .1, ease: 'none' }, 0);
-    $$('.pic', lede).forEach(pic => {
-      // a foto "abre" quando a leitura chega nela
-      const i = [...lede.querySelectorAll('.w, .pic')].indexOf(pic);
-      tl.fromTo(pic, { width: 0, opacity: 0 }, { width: '2.1em', opacity: 1, duration: .6, ease: 'power2.out', clearProps: 'width' }, i * .1);
-    });
+    gsap.to(wrapWords(lede), { opacity: 1, stagger: .1, ease: 'none', scrollTrigger: { trigger: lede, start: 'top 80%', end: 'bottom 50%', scrub: true } });
+    gsap.from('.about__pic', { y: 60, opacity: 0, duration: 1.2, ease: 'expo.out', stagger: .1, scrollTrigger: { trigger: '.about__trio', start: 'top 85%' } });
   }
 
   /* ---------- Um dia no JF: percurso horizontal, céu muda de cor ---------- */

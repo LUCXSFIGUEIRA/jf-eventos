@@ -15,7 +15,7 @@ PARA TROCAR UMA FOTO
 ONDE CADA FOTO APARECE
 - lc-deck .............. vista que aparece quando as portas do topo se abrem
 - lc-*.webp ............ casamento de Lucas e Cássia ("Um dia no JF")
-- lc-corredor, lc-casal-ceu, salao ... fotinhas dentro da frase do "Sobre"
+- lc-corredor, lc-casal-ceu, salao ... três fotos do "Sobre" (gramado, deck, salão)
 - casamento, aniversario, mesa-aniversario, salao-2, mesa-6, fora ... faixas de "Seu evento"
 - salao, lc-deck, cadeiras, salao-3 ... "Tudo pronto para a sua festa"
 - mesa*, porta*, decoracao*, noiva, noivos*, casamento ... galeria (duas fileiras)

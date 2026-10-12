@@ -41,7 +41,7 @@ External libraries are loaded from CDNs at the end of `index.html`: GSAP 3.12.5 
 - **JS progressive enhancement**: `main.js` checks for GSAP/ScrollTrigger. Without them, it runs only `initMenu`, `initLightbox` and `initStrips`, and the page stays static and readable. With them, it also respects `prefers-reduced-motion` (no Lenis, no pins or scroll animations, no confetti) and `(hover: hover) and (pointer: fine)` (magnetic buttons and opening strips on hover run only with a mouse).
 - **Hooks between JS and HTML/CSS**: renaming any of these breaks its behavior.
   - Hero: `.hero`, `.hero__view`, `.hero__caption`, `.door--a`, `.door--b`, `.door__handle`, `.hero__word`.
-  - About and story: `.about__lede` with `.pic`, `.story`, `.story__track`, `.chap`, `.ph`, `.horizon*`.
+  - About and story: `.about__lede`, `.about__pic`, `.story`, `.story__track`, `.chap`, `.ph`, `.horizon*`.
   - Strips, spaces and gallery: `.strip`, `.space`, `.spaces__media img`, `.reel`, `.g`.
   - CTA and other reveals: `.cta__*`, `.step`, `.title`, `.fade-up`, `.location__map`, `.info li`, `.footer__top`.
   - `.magnetic` makes a button follow the mouse.
