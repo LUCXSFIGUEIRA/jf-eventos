@@ -227,7 +227,8 @@ p { text-wrap: pretty; }
 .story.is-h .ph--low { left: 26%; bottom: 0; width: 36%; height: 36%; z-index: 2; }
 .story.is-h .story__end { flex: none; width: 64vw; background: transparent; color: inherit; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 0 10vw 6rem 6vw; }
 .story.is-h .horizon { display: block; position: absolute; left: var(--gutter); right: var(--gutter); bottom: 2.2rem; }
-.horizon__line { position: relative; height: 1px; background: currentColor; opacity: .5; }
+.horizon__line { position: relative; height: 1px; }
+.horizon__line::before { content: ""; position: absolute; inset: 0; background: currentColor; opacity: .5; }
 .horizon__sun { position: absolute; top: 50%; left: 0; width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; background: var(--wood); box-shadow: 0 0 0 6px color-mix(in srgb, var(--wood) 25%, transparent); transition: background .6s, box-shadow .6s; }
 .horizon.is-night .horizon__sun { background: #eef0f3; box-shadow: 0 0 18px 4px rgba(238, 240, 243, .45); }
 .horizon__marks { list-style: none; display: flex; justify-content: space-between; margin-top: .9rem; font-size: .78rem; }
@@ -373,6 +374,13 @@ p { text-wrap: pretty; }
   .hero__sub { display: none; }
   .hero__ctas { margin-top: 1.2rem; }
   .hero__ctas .btn { flex: 1 1 auto; justify-content: center; }
+
+  /* linha do horizonte no celular: barra fixa embaixo durante a história */
+  .horizon { display: block; position: sticky; bottom: 0; z-index: 5; padding: .9rem 84px calc(.9rem + env(safe-area-inset-bottom)) var(--gutter); background: color-mix(in srgb, var(--story-bg) 90%, transparent); color: var(--story-fg); backdrop-filter: blur(10px); border-top: 1px solid color-mix(in srgb, var(--story-fg) 15%, transparent); opacity: 0; transform: translateY(100%); transition: opacity .4s, transform .5s var(--ease), background .6s, color .6s; }
+  .horizon.is-on { opacity: 1; transform: none; }
+  .horizon__marks { margin-top: .7rem; }
+  .horizon__marks li { display: none; }
+  .horizon__marks li.is-active { display: block; font-size: .85rem; }
 
   .strips { flex-direction: column; height: auto; }
   .strip { flex: none; height: 76px; transition: height .7s var(--ease); }

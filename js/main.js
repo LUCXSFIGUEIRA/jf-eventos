@@ -222,8 +222,29 @@
     });
 
     mm.add('(max-width: 860px)', () => {
-      if (reduceMotion) return;
+      // celular: barra do horizonte fixa embaixo, o sol anda de capítulo em capítulo
+      const n = chaps.length;
+      const showBar = ScrollTrigger.create({
+        trigger: chaps[0], endTrigger: chaps[n - 1], start: 'top 70%', end: 'bottom 60%',
+        onToggle: s => horizon.classList.toggle('is-on', s.isActive)
+      });
+      const setChap = (k, prog) => {
+        sun.style.left = Math.min(100, ((k + prog) / n) * 100) + '%';
+        marks.forEach((m, j) => m.classList.toggle('is-active', j === k));
+        horizon.classList.toggle('is-night', k >= 4);
+        story.style.setProperty('--story-bg', css(chaps[k], '--c-bg'));
+        story.style.setProperty('--story-fg', css(chaps[k], '--c-fg'));
+      };
+      const triggers = chaps.map((ch, k) => ScrollTrigger.create({
+        trigger: ch, start: 'top 60%', end: 'bottom 60%',
+        onUpdate: s => setChap(k, s.progress),
+        onToggle: s => { if (s.isActive) setChap(k, s.progress); }
+      }));
+      setChap(0, 0);
+      const cleanup = () => { showBar.kill(); triggers.forEach(t => t.kill()); horizon.classList.remove('is-on', 'is-night'); story.style.removeProperty('--story-bg'); story.style.removeProperty('--story-fg'); };
+      if (reduceMotion) return cleanup;
       $$('.ph', story).forEach(ph => gsap.from(ph, { y: 40, opacity: 0, duration: 1, ease: 'expo.out', scrollTrigger: { trigger: ph, start: 'top 90%' } }));
+      return cleanup;
     });
   }
 
