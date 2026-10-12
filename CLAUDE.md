@@ -47,6 +47,7 @@ External libraries are loaded from CDNs at the end of `index.html`: GSAP 3.12.5 
   - `.magnetic` makes a button follow the mouse.
 - **Smooth scroll**: when Lenis is active, in-page anchor links (`a[href^="#"]`) are intercepted and scrolled through Lenis. The mobile menu and lightbox call `lenis.stop()`/`start()`. Any new overlay should do the same.
 - **Breakpoints**: JS uses `(min-width: 861px)` (constant `DESKTOP`) for the doors' direction, the horizontal story and the gallery drift. The CSS uses the same 860px breakpoint, plus 1100px, 1024px and 600px. Change both together.
+- **Zelo credit**: the footer has "Site feito com zelo por" + `img/zelo.svg`, linking to https://www.zeloweb.com.br/ (the owner's company). It copies the credit used on studiocbeauty.com.br (`.footer__credit`). Keep it on every footer redesign.
 - **Contact info** (WhatsApp `5515997615353`, Instagram `_eventosjf`, address Av. Ataliba Figueira, 122, Centro, Guareí-SP) is hard-coded in many `wa.me`/Instagram links throughout `index.html`, and is also in `README.md`. Update every occurrence together.
 
 ## Design

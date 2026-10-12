@@ -320,6 +320,11 @@ p { text-wrap: pretty; }
 .footer__actions .btn { min-width: 250px; justify-content: center; }
 .footer__row { display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(241, 238, 232, .14); font-size: .86rem; opacity: .75; }
 .to-top:hover { color: #e9a77e; }
+/* crédito da Zelo (mesmo padrão do studiocbeauty.com.br) */
+.footer__credit { display: inline-flex; align-items: center; gap: 10px; transition: color .3s; }
+.footer__credit img { width: auto; height: 18px; opacity: .75; transition: opacity .3s; }
+.footer__credit:hover { color: var(--on-night); }
+.footer__credit:hover img { opacity: 1; }
 
 /* ========== Cores das marcas ========== */
 .ph-whatsapp-logo { color: var(--wa); }
