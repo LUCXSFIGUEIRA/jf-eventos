@@ -15,7 +15,7 @@ Static HTML/CSS/JS with no build step, no package manager and no tests. To run i
   - the palette (`--bg`, `--bg-2`, `--surface`, `--ink`, `--sky`, `--sky-deep`, `--wood`, `--wood-deep`, `--on-wood`, `--night`, `--on-night`);
   - brand colors `--wa`/`--ig`;
   - the radius `--r` (4px everywhere) and `--nav-h`;
-  - the story sky colors (`--tarde-*`, `--sim-*`, `--sol-*`, `--recep-*`, `--noite-*`, `--festa-*`);
+  - the story sky colors (`--tarde-*`, `--sim-*`, `--saida-*`, `--recep-*`, `--noite-*`, `--festa-*`);
   - a z-index scale (`--z-*`).
 
   Dark mode is automatic: a `@media (prefers-color-scheme: dark)` block overrides the same tokens, so always use tokens instead of hard-coded colors. Class names are BEM-style (`block__element--modifier`), and states use `is-*` classes.

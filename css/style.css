@@ -39,7 +39,7 @@
   /* cores do céu ao longo do dia (seção "Um dia no JF") */
   --tarde-bg: #f4f2ee; --tarde-fg: #1c2430;
   --sim-bg: #dde5ec;   --sim-fg: #1c2430;
-  --sol-bg: #ebcdb4;   --sol-fg: #2a1d16;
+  --saida-bg: #ece3d6; --saida-fg: #2a1d16;
   --recep-bg: #e4d5c5; --recep-fg: #2a1d16;
   --noite-bg: #1e2a3b; --noite-fg: #eef0f3;
   --festa-bg: #121a26; --festa-fg: #f3efe7;
@@ -200,7 +200,7 @@ p { text-wrap: pretty; }
 .story__lead { margin-top: 1.4rem; max-width: 42ch; opacity: .8; font-size: 1.05rem; }
 .chap { --c-bg: var(--tarde-bg); --c-fg: var(--tarde-fg); background: var(--c-bg); color: var(--c-fg); padding: 4rem var(--gutter); }
 .chap:nth-of-type(2) { --c-bg: var(--sim-bg); --c-fg: var(--sim-fg); }
-.chap:nth-of-type(3) { --c-bg: var(--sol-bg); --c-fg: var(--sol-fg); }
+.chap:nth-of-type(3) { --c-bg: var(--saida-bg); --c-fg: var(--saida-fg); }
 .chap:nth-of-type(4) { --c-bg: var(--recep-bg); --c-fg: var(--recep-fg); }
 .chap:nth-of-type(5) { --c-bg: var(--noite-bg); --c-fg: var(--noite-fg); }
 .chap:nth-of-type(6) { --c-bg: var(--festa-bg); --c-fg: var(--festa-fg); }
@@ -281,7 +281,7 @@ p { text-wrap: pretty; }
 /* ========== Chamada final ========== */
 .cta { position: relative; overflow: hidden; color: var(--on-night); padding: clamp(7rem, 13vw, 10rem) 0 clamp(4rem, 7vw, 5rem); }
 .cta__bg { position: absolute; inset: -10% 0; }
-.cta__bg img { width: 100%; height: 100%; object-fit: cover; object-position: 55% 60%; }
+.cta__bg img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
 .cta__bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(18, 26, 38, .55), rgba(18, 26, 38, .88)); }
 .cta__confetti { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 2; }
 .cta__inner { position: relative; z-index: 1; }
